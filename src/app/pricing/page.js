@@ -126,11 +126,11 @@ const domainOptions = [
 const faqs = [
   {
     question: 'How does the 7-day design request guarantee work?',
-    answer: 'After you purchase the Launch Plan, you have 7 days to request unlimited design tweaks to your website. Our team will implement your requested changes until you're satisfied with the result. This ensures your website looks exactly how you want it before going live.',
+    answer: "After you purchase the Launch Plan, you have 7 days to request unlimited design tweaks to your website. Our team will implement your requested changes until you are satisfied with the result. This ensures your website looks exactly how you want it before going live.",
   },
   {
-    question: 'Can I switch templates after I've launched my site?',
-    answer: 'Yes, you can switch templates at any time. If you're on the Launch Plan or higher, we'll help you transfer your content to the new template. For significant redesigns, we recommend the Pro Design add-on for the best results.',
+    question: "Can I switch templates after I have launched my site?",
+    answer: "Yes, you can switch templates at any time. If you are on the Launch Plan or higher, we will help you transfer your content to the new template. For significant redesigns, we recommend the Pro Design add-on for the best results.",
   },
   {
     question: 'What happens after my 7-day design request period ends?',
@@ -142,7 +142,7 @@ const faqs = [
   },
   {
     question: 'Can I download my website and host it elsewhere?',
-    answer: 'Yes, our Free plan allows you to download the static HTML of your generated website. You can then host it on any web hosting service of your choice. However, you won't have access to our admin panel or "Done For You" services unless you're on a paid plan.',
+    answer: "Yes, our Free plan allows you to download the static HTML of your generated website. You can then host it on any web hosting service of your choice. However, you will not have access to our admin panel or \"Done For You\" services unless you are on a paid plan.",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function PricingPage() {
   return (
     <div className="min-h-screen pt-20 pb-16 bg-dark-950">
       <BackgroundEffect type="gradient" className="opacity-50" />
-      
+
       {/* Hero Section */}
       <Section className="py-16">
         <div className="text-center mb-12">
@@ -171,7 +171,7 @@ export default function PricingPage() {
           <p className="text-xl text-gray-100 max-w-3xl mx-auto mb-8 text-shadow">
             Transparent pricing with no hidden fees. Choose the plan that works best for you.
           </p>
-          
+
           {/* Billing Toggle */}
           <div className="flex items-center justify-center mb-12">
             <span className={`mr-3 ${!isYearly ? 'text-white font-medium' : 'text-gray-400'}`}>
@@ -192,7 +192,7 @@ export default function PricingPage() {
             </span>
           </div>
         </div>
-        
+
         {/* Main Pricing Plans */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {pricingPlans.map((plan, index) => (
@@ -212,11 +212,11 @@ export default function PricingPage() {
                   MOST POPULAR
                 </div>
               )}
-              
+
               <div className="p-8">
                 <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
                 <p className="text-gray-400 mb-6">{plan.description}</p>
-                
+
                 <div className="mb-6">
                   <span className="text-4xl font-bold">${plan.price}</span>
                   <span className="text-gray-400 ml-2">/{plan.period}</span>
@@ -224,7 +224,7 @@ export default function PricingPage() {
                     <p className="text-sm text-gray-400 mt-1">{plan.renewal}</p>
                   )}
                 </div>
-                
+
                 <ul className="space-y-3 mb-8">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start">
@@ -246,7 +246,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Button
                   href={plan.ctaLink}
                   variant={plan.popular ? 'primary' : 'outline'}
@@ -259,7 +259,7 @@ export default function PricingPage() {
             </motion.div>
           ))}
         </div>
-        
+
         {/* "Done For You" Change Plans */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -267,11 +267,11 @@ export default function PricingPage() {
               <span className="text-gradient gradient-text-secondary">"Done For You"</span> Change Plans
             </h2>
             <p className="text-gray-100 max-w-3xl mx-auto text-shadow">
-              Let us handle the edits — no drag-and-drop, no messy builders. Just tell us what you want changed, 
+              Let us handle the edits — no drag-and-drop, no messy builders. Just tell us what you want changed,
               and our Human + AI team will take care of it.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {changePlans.map((plan, index) => (
               <motion.div
@@ -320,7 +320,7 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-        
+
         {/* Domain Options */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -331,7 +331,7 @@ export default function PricingPage() {
               Choose how you want to handle your domain name. We offer flexible options to suit your needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {domainOptions.map((option, index) => (
               <motion.div
@@ -351,7 +351,7 @@ export default function PricingPage() {
                     <span className="text-gray-400 ml-1">/{option.period}</span>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-2 mb-6">
                   {option.features.map((feature) => (
                     <li key={feature} className="flex items-start">
@@ -362,7 +362,7 @@ export default function PricingPage() {
                     </li>
                   ))}
                 </ul>
-                
+
                 <Button
                   variant="accent"
                   fullWidth
@@ -373,7 +373,7 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-        
+
         {/* FAQ Section */}
         <div>
           <div className="text-center mb-12">
@@ -384,7 +384,7 @@ export default function PricingPage() {
               Still have questions? Contact us at support@instantwebsite.ai
             </p>
           </div>
-          
+
           <div className="max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
               <div
@@ -423,7 +423,7 @@ export default function PricingPage() {
           </div>
         </div>
       </Section>
-      
+
       {/* CTA Section */}
       <Section className="bg-dark-900 py-16 relative">
         <BackgroundEffect type="aurora" intensity="low" />

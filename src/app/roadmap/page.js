@@ -84,7 +84,7 @@ const statusColors = {
 
 export default function RoadmapPage() {
   const sectionRef = useRef(null);
-  
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Animate roadmap items
@@ -99,14 +99,14 @@ export default function RoadmapPage() {
         },
       });
     }, sectionRef);
-    
+
     return () => ctx.revert();
   }, []);
-  
+
   return (
     <div className="min-h-screen pt-20 pb-16 bg-dark-950" ref={sectionRef}>
       <BackgroundEffect type="gradient" className="opacity-50" />
-      
+
       {/* Hero Section */}
       <Section className="py-16">
         <div className="text-center mb-16">
@@ -114,20 +114,20 @@ export default function RoadmapPage() {
             Our <span className="text-gradient gradient-text-primary">Roadmap</span>
           </h1>
           <p className="text-xl text-gray-100 max-w-3xl mx-auto mb-8 text-shadow">
-            See what we've built and what's coming next for instantWebsiteAi.
-            We're constantly improving our platform based on user feedback.
+            See what we have built and what is coming next for instantWebsiteAi.
+            We are constantly improving our platform based on user feedback.
           </p>
         </div>
-        
+
         {/* Roadmap Timeline */}
         <div className="roadmap-timeline relative max-w-5xl mx-auto">
           {/* Timeline line */}
           <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-primary-500 via-secondary-500 to-accent-500 transform md:-translate-x-1/2"></div>
-          
+
           {/* Phases */}
           <div className="relative z-10">
             {phases.map((phase, index) => (
-              <div 
+              <div
                 key={phase.title}
                 className={`roadmap-item relative mb-16 last:mb-0 ${
                   index % 2 === 0 ? 'md:pr-12 md:text-right md:ml-auto md:mr-0' : 'md:pl-12 md:ml-0 md:mr-auto'
@@ -137,9 +137,9 @@ export default function RoadmapPage() {
                 <div className={`absolute left-0 md:left-auto ${
                   index % 2 === 0 ? 'md:right-0 md:translate-x-1/2' : 'md:left-0 md:-translate-x-1/2'
                 } top-0 w-6 h-6 rounded-full bg-dark-950 border-4 border-primary-500 z-20 transform -translate-x-1/2 md:translate-x-0`}></div>
-                
+
                 {/* Content */}
-                <motion.div 
+                <motion.div
                   className="glass-card rounded-xl p-6 shadow-lg"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -151,15 +151,15 @@ export default function RoadmapPage() {
                       {phase.status === 'live' ? 'Live Now' : phase.status === 'upcoming' ? 'Coming Soon' : 'Planned'}
                     </span>
                   </div>
-                  
+
                   {phase.eta && (
                     <div className="mb-3 text-primary-400 font-medium">
                       Estimated: {phase.eta}
                     </div>
                   )}
-                  
+
                   <p className="text-gray-300 mb-4">{phase.description}</p>
-                  
+
                   <ul className="space-y-2">
                     {phase.features.map((feature) => (
                       <li key={feature} className="flex items-start">
@@ -181,7 +181,7 @@ export default function RoadmapPage() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   {phase.status === 'live' && (
                     <div className="mt-6">
                       <Button href="/demo" size="sm">
@@ -195,7 +195,7 @@ export default function RoadmapPage() {
           </div>
         </div>
       </Section>
-      
+
       {/* Feedback Section */}
       <Section className="bg-dark-900 py-16 relative">
         <BackgroundEffect type="aurora" intensity="low" />
