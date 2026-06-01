@@ -1,5 +1,7 @@
 # instantWebsiteAi
 
+Live Demo: https://d30-i42-instant-website-ai.vercel.app
+
 ## From name to website in 30 seconds.
 
 instantWebsiteAi makes it effortless for anyone—especially non-technical users—to launch a professional website instantly. Just enter your business name, upload a logo, and see your site live on a free subdomain in seconds. No builders, no code, no drag-and-drop. Powered by AI but refined by real humans, we guarantee quality websites without the usual DIY headaches.
