@@ -10,6 +10,7 @@ allowBuilds:
   node-sass: true
   "@fortawesome/fontawesome-free": true
   "@tsparticles/engine": true
+  react-tsparticles: true
   tsparticles-engine: true
 overrides:
   postcss: ^8.5.15
